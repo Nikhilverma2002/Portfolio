@@ -23,7 +23,7 @@ export default function ContactForm({ id }) {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Message Sent");
       toast.success("Message sent successfully.", {
         position: "top-right",
         autoClose: 3000,
