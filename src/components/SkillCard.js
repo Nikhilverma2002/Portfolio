@@ -82,12 +82,12 @@ export default function SkillCard({ id }) {
             </abbr>
             <abbr title="Windows">
               <SiFirebase className="techLogo" />
-              <h3 className="techContent">Firebase</h3>
+              <h3 className="techContent">Firebase R.D.</h3>
             </abbr>
-            <abbr title="Figma">
+            {/* <abbr title="Figma">
               <SiAmazonaws className="techLogo" />
               <h3 className="techContent">AWS S3</h3>
-            </abbr>
+            </abbr> */}
           </div>
         </div>
         <div className="skill-box">
