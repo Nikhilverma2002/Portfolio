@@ -29,7 +29,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #F94892;
+  border: 2px solid #7E7474;
   width: fit-content;
   padding: 15px 25px;
   color: #fff;
@@ -43,7 +43,7 @@ ul {
 }
 
 .btn:hover {
-  background-color: #F94892;
+  background-color: #7E7474;
   bottom: 12px;
   box-shadow: 0 0 20px 1px rgba(205, 106, 139, 0.65);
 }

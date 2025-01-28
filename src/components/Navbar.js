@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import "./NavbarStyle.css";
 import { Link } from "react-scroll";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -61,6 +55,18 @@ export default function Navbar() {
           <Link
             className="navLink"
             activeClass="active"
+            to="workExperience"
+            spy={true}
+            smooth={true}
+            duration={30}
+          >
+            Work-Ex.
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="navLink"
+            activeClass="active"
             to="skills"
             spy={true}
             smooth={true}
@@ -95,7 +101,7 @@ export default function Navbar() {
           />
         </a>
         <a
-          href="https://github.com/Deepajha14"
+          href="https://github.com/Nikhilverma2002"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -105,7 +111,7 @@ export default function Navbar() {
             style={{ marginRight: "2rem" }}
           />
         </a>
-        <a
+        {/* <a
           href="https://www.instagram.com/artsydeepa/"
           target="_blank"
           rel="noopener noreferrer"
@@ -115,7 +121,7 @@ export default function Navbar() {
             size={25}
             style={{ marginRight: "2rem" }}
           />
-        </a>
+        </a> */}
       </div>
       <div className="hamburger" onClick={handleCLick}>
         {click ? (

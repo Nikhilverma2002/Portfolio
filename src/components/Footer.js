@@ -9,7 +9,7 @@ export default function Footer() {
   }
   return (
     <div className="footer">
-      Made with ❤ by Nikhil Verma <span style={styleSymbol}>©</span> 2023
+      Made by Nikhil Verma <span style={styleSymbol}>©</span> 2025
     </div>
   );
 }

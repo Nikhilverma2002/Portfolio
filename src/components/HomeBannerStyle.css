@@ -75,7 +75,7 @@
 
   .home .content .dynamicTitle li span {
     white-space: wrap;
-    background-image: linear-gradient(to right, #ffe1a0, #f67280, #F94892);
+    background-image: linear-gradient(to right, #ffe1a0, #f67280, #7E7474);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: -1;

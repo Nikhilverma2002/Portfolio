@@ -28,6 +28,7 @@
 .contact-wrapper-left {
     width: 450px;
     height: 100%;
+    margin-bottom: 35px;
 }
 
 .contact-wrapper-right {
@@ -38,11 +39,21 @@
     align-items: center;
 }
 
-.contact-wrapper-right input, textarea {
+.contact-wrapper-right input {
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 6px;
     margin-bottom: 25px;
+    padding-left: 15px;
+    font-size: 18px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+textarea {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
     padding-left: 15px;
     font-size: 18px;
     width: 100%;
@@ -79,7 +90,7 @@
 
     .contact-wrapper-right textarea {
         font-size: 16px;
-        margin-bottom: 20px;
+
     }
 
     .btn#submitBtn {

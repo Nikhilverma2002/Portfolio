@@ -9,6 +9,7 @@ import SkillCard from './components/SkillCard'
 import ContactForm from "./components/ContactForm";
 import WorkExperience from "./components/WorkExperience";
 
+
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
           mixBlendMode: "exclusion",
         }}
         innerStyle={{
-          backgroundColor: "#F94892",
+          backgroundColor: "#7E7474",
         }}
       /> */}
       <div>
@@ -75,6 +76,7 @@ function App() {
           deployedProjectLink="https://wa.me/+919109958319"
           projectImg={require("./images/projectBot.png")}
         />
+
         <WorkExperience id="workExperience" />
         <SkillCard id="skills" />
         <ContactForm id="contact" />

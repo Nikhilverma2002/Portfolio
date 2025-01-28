@@ -2,45 +2,53 @@ import React, { useRef } from 'react';
 import './ContactFormStyle.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import emailjs from '@emailjs/browser';
-import cartoon from '../images/cartoon-compressed.png';
+import cartoon from "../images/cartoon2.png";
 
 export default function ContactForm({ id }) {
   const form = useRef();
+  const [result, setResult] = React.useState("Send Message");
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-    emailjs.sendForm('deepajha14', 'template_lyzbf0p', form.current, '-8AsG2hlNcWfgWJFj')
-      .then((result) => {
-          console.log(result.text);
-          toast.success('Message sent successfully.', {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            });
-      }, (error) => {
-          console.log(error.text);
-          toast.error("Failed to send message. Kindly refresh the page.", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            });
+    formData.append("access_key", "94d44694-63f2-41b9-96d5-7eeb87be6182");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      toast.success("Message sent successfully.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
       });
+      event.target.reset();
+    } else {
+      toast.error("Failed to send message. Kindly refresh the page.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setResult(data.message);
+    }
   };
-
-
-
 
   return (
     <div className="contact-window" id={id}>
@@ -52,12 +60,12 @@ export default function ContactForm({ id }) {
           alt="Nikhil Verma"
           className="contact-wrapper-left"
         ></img>
-        <form ref={form} onSubmit={sendEmail} className="contact-wrapper-right">
+        <form ref={form} onSubmit={onSubmit} className="contact-wrapper-right">
           <input
             id="name"
             type="text"
             name="name"
-            placeholder="Full Name"
+            placeholder="Name"
             required
           />
           <input
@@ -72,12 +80,13 @@ export default function ContactForm({ id }) {
             name="message"
             rows="5"
             column="15"
-            placeholder="Share your thoughts and insights here; your feedback means a lot."
+            placeholder="Share your thoughts and insights here to connect..."
             required
           />
           <button className="btn" id="submitBtn" type="submit" value="Send">
-            Send Message
+            {result}
           </button>
+
           <ToastContainer />
         </form>
       </div>

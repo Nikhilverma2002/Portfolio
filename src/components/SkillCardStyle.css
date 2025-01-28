@@ -7,6 +7,12 @@
     margin: 50px 7vw 0px 15vw;
 }
 
+.techContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .skill-container .skill-header {
     font-size: 50px;
 
