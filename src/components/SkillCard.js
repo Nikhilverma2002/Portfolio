@@ -7,7 +7,9 @@ import {
   SiNextdotjs,
   SiAndroidstudio,
   SiFirebase,
+  SiDocker,
   SiMongodb,
+  SiGooglecloud,
   SiFigma,
   SiAmazonaws,
   SiIntellijidea,
@@ -16,6 +18,7 @@ import {
   TbBrandTailwind,
   TbBrandJavascript,
   TbBrandKotlin,
+  TbCloud,
 } from "react-icons/tb";
 import { IoLogoNpm } from "react-icons/io";
 
@@ -74,20 +77,20 @@ export default function SkillCard({ id }) {
           </div>
         </div>
         <div className="skill-box">
-          <h2>Databases</h2>
+          <h2>Database & Services</h2>
           <div className="skillset">
-            <abbr title="Visual Studio Code">
+            <abbr title="MongoDB">
               <SiMongodb className="techLogo" />
               <h3 className="techContent">MongoDB</h3>
             </abbr>
-            <abbr title="Windows">
+            <abbr title="Firebase">
               <SiFirebase className="techLogo" />
-              <h3 className="techContent">Firebase R.D.</h3>
+              <h3 className="techContent">Firebase</h3>
             </abbr>
-            {/* <abbr title="Figma">
+            <abbr title="Figma">
               <SiAmazonaws className="techLogo" />
-              <h3 className="techContent">AWS S3</h3>
-            </abbr> */}
+              <h3 className="techContent">AWS S3 & EC2</h3>
+            </abbr>
           </div>
         </div>
         <div className="skill-box">
@@ -101,10 +104,19 @@ export default function SkillCard({ id }) {
               <SiAndroidstudio className="techLogo" />
               <h3 className="techContent">Android</h3>
             </abbr>
+            <abbr title="Cloudinary">
+              <TbCloud className="techLogo" />
+              <h3 className="techContent">Cloudinary</h3>
+            </abbr>
             <abbr title="Figma">
               <SiFigma className="techLogo" />
               <h3 className="techContent">Figma</h3>
             </abbr>
+            <abbr title="Docker">
+              <SiDocker className="techLogo" />
+              <h3 className="techContent">Docker</h3>
+            </abbr>
+
             <abbr title="IntelliJ">
               <SiIntellijidea className="techLogo" />
               <h3 className="techContent">IntelliJ</h3>
